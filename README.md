@@ -25,6 +25,8 @@ CI/CD 的核心概念是持续集成、持续交付和持续部署。
 #### codo
 #### spug
 
+
+### 参考文档
 [使用 git 改善项目的协作](https://medium.com/flexisaf/git-workflow-for-your-project-3d9dbdc5f8e2) -- 提供一种工作流程，避免了 demo 适配不同工作流程带来太多的工作量。
 
 [drone的pipeline原理与代码分析](https://www.cnblogs.com/xiaoqi/p/drone-pipeline.html) 帮助理解drone工作流程
@@ -53,7 +55,7 @@ CI/CD
 3. 用一个 CI 服务器接收 webhooks 并调度到对应的 runner；
 4. runner进行编译和测试并通知编译结果。
 
-
+## 模块
 
 ### OAuth
 通过 OAuth 模块获取仓库信息并注册webhook钩子监听推送。
@@ -75,7 +77,8 @@ UI参考Drone和Jenkins。
 任务通过启用目标仓库后监听webhook自动进行，交付或部署由目标仓库内配置文件和权限一起控制。
 
 
-### 主机管理
+## CD
+### 主机控制
 #### 方案一
 参考codo和spug,依赖docker，无须其他工具。
 通过账号密码在目标主机增加ssh密钥后使用ssh连接进行管理。
@@ -92,7 +95,7 @@ UI参考Drone和Jenkins。
 缺点：
 涉及知识点更少。
 
-### 安全保障
+## 安全保障
 弱项，边做边加
 
 
